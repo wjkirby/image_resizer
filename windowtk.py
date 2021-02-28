@@ -1,6 +1,7 @@
 """ Website image resizer program"""
 
 import tkinter as tk
+from tkinter import ttk
 from tkinter import filedialog as fd
 import os
 #import shutil
@@ -13,7 +14,6 @@ window.title("Website Image Processor")
 folder_path = tk.StringVar()
 file1_path = tk.StringVar()
 file2_path = tk.StringVar()
-# file_name = tk.StringVar()
 lbl_bg_color = "gray21"
 lbl_fg_color = "white"
 logo = './ricer-logo.png'
@@ -98,22 +98,22 @@ file_name_display.grid(row=3, column=1,pady=5)
 display_box = tk.Listbox(window, width=57)
 display_box.grid(row=4, column=0, rowspan=4, columnspan=3, padx=5, pady=5)
 
-folder_button = tk.Button(window, text="Browse Folder", width=12, command=browseFolders)
+folder_button = ttk.Button(window, text="Browse Folder", width=12, command=browseFolders)
 folder_button.grid(row=0, column=4, padx=5)
 
-first_image_button = tk.Button(window, text="First Image", width=12, command=browseFile1)
+first_image_button = ttk.Button(window, text="First Image", width=12, command=browseFile1)
 first_image_button.grid(row=1, column=4,padx=5)
 
-last_image_button = tk.Button(window, text="Last Image", width=12, command=browseFile2)
+last_image_button = ttk.Button(window, text="Last Image", width=12, command=browseFile2)
 last_image_button.grid(row=2, column=4, padx=5)
 
-process_button = tk.Button(window, text="Process Images", width=12, command=processImages)
+process_button = ttk.Button(window, text="Process Images", width=12, command=processImages)
 process_button.grid(row=4, column=4, padx=5)
 
-clear_button = tk.Button(window, text="Clear Entries", width=12, command=clearEntries)
+clear_button = ttk.Button(window, text="Clear Entries", width=12, command=clearEntries)
 clear_button.grid(row=5, column=4, padx=5)
 
-exit_button = tk.Button(window, text="Exit", width=12, command=window.destroy)
+exit_button = ttk.Button(window, text="Exit", width=12, command=window.destroy)
 exit_button.grid(row=6, column=4, padx=5)
 
 

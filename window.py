@@ -1,3 +1,5 @@
+""" Website image resizer program"""
+
 from tkinter import *
 from tkinter import ttk
 from tkinter import filedialog

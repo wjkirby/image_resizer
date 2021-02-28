@@ -1,8 +1,14 @@
 """ Website image resizer program"""
 
-from tkinter import *
+from tkinter import Tk
 from tkinter import ttk
 from tkinter import filedialog
+from tkinter import StringVar
+from tkinter import Label
+from tkinter import Listbox
+from tkinter import Entry
+from tkinter import Button
+from tkinter import END
 import os
 import os.path
 import shutil
@@ -14,12 +20,14 @@ def browseFolders():
     folder_selected = filedialog.askdirectory()+"/"
     folder_path.set(folder_selected)
 
+
 def browseFile1():
     global file1_path
     global file1_selected
     file1_selected = filedialog.askopenfilename(initialdir=folder_selected)
     file1_selected = os.path.split(file1_selected)[1]
     file1_path.set(file1_selected)
+
 
 def browseFile2():
     global file2_path
@@ -31,6 +39,7 @@ def browseFile2():
         file2_path.set("Error - file sequense less than file 1")
     else:
         file2_path.set(file2_selected)
+
 
 def clearEntries():
     global folder_path
@@ -45,6 +54,7 @@ def clearEntries():
     file2_selected = ""
     file_name = ""
     display_box.delete(0, END)
+
 
 def processImages():
     global file_name

@@ -29,6 +29,7 @@ while process_images == 'y':
     images.sort()
 
     for file in images:
+        print(file)
         if file >= first_file and file <= last_file:
             file_img = folder+"/"+file
             orig_img = file_img
